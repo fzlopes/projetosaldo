@@ -11,7 +11,7 @@ class BalanceController extends Controller
     public function index()
     {
         $balance = auth()->user()->balance;
-        $amount  = $balance ? $balance->amount() : 0;
+        $amount  = $balance ? $balance->amount : 0;
         
         return view('admin.balance.index', compact('amount'));
     }
@@ -23,7 +23,7 @@ class BalanceController extends Controller
 
     public function depositStore(Request $request, Balance $balance)
     {
-        $balance = auth()->user()->balance()->firstOrCreate());
-        $balance->deposit($request->value);
+        $balance = auth()->user()->balance()->firstOrCreate([]);
+        dd($balance->deposit($request->value));
     }
 }

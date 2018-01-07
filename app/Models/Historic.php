@@ -12,7 +12,7 @@ class Historic extends Model
      * @var array
      */
     protected $fillable = [
-        'type', 'amount', 'total_after' 'total_before', 'user_id_transaction', 'date',
+        'type', 'amount', 'total_before', 'total_after', 'user_id_transaction', 'date',
     ];
 
 }

@@ -34,7 +34,7 @@ class User extends Authenticatable
         return $this->hasOne(Balance::class);
     }
 
-    public funcion historics()
+    public function historics()
     {
         return $this->hasMany(Historic::class);
     }
