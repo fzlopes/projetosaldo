@@ -143,5 +143,5 @@ class Balance extends Model
                 'success' => false,
                 'message' => 'Falha ao transferir',
             ];
-        }
     }
+}
