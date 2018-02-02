@@ -11,7 +11,7 @@ Route::group(['middleware' => ['auth'], 'namespace' => 'Admin', 'prefix' => 'adm
     Route::post('confirm-transfer', 'BalanceController@confirmTransfer')->name('confirm.transfer');
     Route::post('transfer', 'BalanceController@transferStore')->name('transfer.store');
     Route::get('historic', 'BalanceController@historic')->name('admin.historic');
-    Route::post('historic', 'BalanceController@searchHistoric')->name('historic.search');
+    Route::any('historic-search', 'BalanceController@searchHistoric')->name('historic.search');
 });
 
 Route::get('/', 'Site\SiteController@index')->name('home');
